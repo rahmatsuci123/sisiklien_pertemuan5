@@ -1,10 +1,16 @@
-
+import { useNavigate } from "react-router-dom";
 import LabeledInput from "../elements/LabeledInput";
 import Button from "../elements/button";
 
 const LoginForm = () => {
+  const link = useNavigate()
+
+  const handlesubmit = (e) =>{
+    e.preventDefault()
+    link('/balance')
+  }
   return (
-    <form action="">
+    <form onClick={handlesubmit}>
       <div className="mb-6">
         <LabeledInput
           label="Email Address"
@@ -23,10 +29,6 @@ const LoginForm = () => {
       </div>
       <Button variant="bg-[#299D91] w-full text-white" type="submit">
         Login
-      </Button>
-
-      <Button variant="bg-[#299D91] w-full text-white mt-4" type="submit">
-        Forgot Password
       </Button>
     </form>
   );

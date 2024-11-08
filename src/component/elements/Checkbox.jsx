@@ -1,4 +1,4 @@
-
+/* eslint-disable react/prop-types */
 const CheckBox = (props) => {
     const { label, name } = props;
   

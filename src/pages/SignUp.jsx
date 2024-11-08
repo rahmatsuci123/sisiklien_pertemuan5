@@ -1,4 +1,3 @@
-
 import FormSignUp from "../component/fragments/FormSignUp";
 import AuthLayout from "../component/layout/AuthLayout";
 
